@@ -4,6 +4,7 @@ The following table shows the power supply current that various ESP32 boards req
 
 | Board                | Voltage [V] | Awake [mA] | Light Sleep [mA] | Deep Sleep [mA] | Measurement Conditions |
 | -------------------- | :---------: | :--------: | :--------------: | :-------------: | :-------------------- |
+| Elgoo ESP-WROOM-32   |         3.3 |       00.0 |             00.0 |            00.0 |  |
 | Espressif ESP32-C61  |         3.3 |       00.0 |             00.0 |            00.0 |  |
 | EzSBC ESP32-01       |         3.7 |       52.6 |              1.6 |         < 0.012 | UNI-T UT61E multimeter (mA range), UNI-T UT61E multimeter (mA range), oscillosope at an 1.00 &#937; series resistor |
 | EzSBC ESP32-01       |     **5.0** |       53.1 |              1.6 |       **0.012** | UNI-T UT61E multimeter (mA range), UNI-T UT61E multimeter (mA range), oscillosope at an 1.00 &#937; series resistor |
@@ -14,6 +15,8 @@ The following table shows the power supply current that various ESP32 boards req
 | WEMOS LOLIN32 V1.0.0 |         3.7 |       55.7 |              2.0 |            0.13 | UNI-T UT61E multimeter (mA range), UNI-T UT61E multimeter (mA range), oscillosope at an 1.00 &#937; series resistor |
 | WEMOS LOLIN32 V1.0.0 |     **5.0** |       57.3 |              3.1 |         **1.2** | UNI-T UT61E multimeter (mA range), UNI-T UT61E multimeter (mA range), oscillosope at an 1.00 &#937; series resistor |
 | Damaged WT32-ETH01   |         3.3 |       00.0 |             00.0 |            00.0 |  |
+| WeActStudio/ Shenzhen Xinming Electronics Co. Ltd ESP32-C6-WROOM-1 |         3.3 |       00.0 |             00.0 |            00.0 |  |
+
 
 ## Test Setup
 
