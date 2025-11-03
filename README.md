@@ -2,19 +2,22 @@
 
 The following table shows the power supply current that various ESP32 boards require in different operating modes. These milli- and micro-amperes decide whether the board is well suited for battery operation:
 
-| Board                | Voltage [V] | Awake [mA] | Light Sleep [mA] | Deep Sleep [mA] |
-| -------------------- | :---------: | :--------: | :--------------: | :-------------: |
-| EzSBC ESP32-01       |         3.7 |       52.6 |              1.6 |         < 0.012 |
-| EzSBC ESP32-01       |     **5.0** |       53.1 |              1.6 |       **0.012** |
-| EzSBC ESP32-01       |        12.0 |       53.4 |              1.8 |           0.016 |
-| LILYGO ESP32 OLED    |     **5.0** |       64.5 |             10.8 |         **9.4** |
-| NodeMCU ESP-32S V1.1 |     **5.0** |       64.6 |             13.8 |         **4.7** |
-| WEMOS LOLIN32 V1.0.0 |         3.7 |       55.7 |              2.0 |            0.13 |
-| WEMOS LOLIN32 V1.0.0 |     **5.0** |       57.3 |              3.1 |         **1.2** |
+| Board                | Voltage [V] | Awake [mA] | Light Sleep [mA] | Deep Sleep [mA] | Measurement Conditions |
+| -------------------- | :---------: | :--------: | :--------------: | :-------------: | :-------------------- |
+| Espressif ESP32-C61  |         3.3 |       00.0 |             00.0 |            00.0 |  |
+| EzSBC ESP32-01       |         3.7 |       52.6 |              1.6 |         < 0.012 | UNI-T UT61E multimeter (mA range), UNI-T UT61E multimeter (mA range), oscillosope at an 1.00 &#937; series resistor |
+| EzSBC ESP32-01       |     **5.0** |       53.1 |              1.6 |       **0.012** | UNI-T UT61E multimeter (mA range), UNI-T UT61E multimeter (mA range), oscillosope at an 1.00 &#937; series resistor |
+| EzSBC ESP32-01       |        12.0 |       53.4 |              1.8 |           0.016 | UNI-T UT61E multimeter (mA range), UNI-T UT61E multimeter (mA range), oscillosope at an 1.00 &#937; series resistor |
+| Generic ES32-C3      |         3.3 |       00.0 |             00.0 |            00.0 |  |
+| LILYGO ESP32 OLED    |     **5.0** |       64.5 |             10.8 |         **9.4** | UNI-T UT61E multimeter (mA range), UNI-T UT61E multimeter (mA range), oscillosope at an 1.00 &#937; series resistor |
+| NodeMCU ESP-32S V1.1 |     **5.0** |       64.6 |             13.8 |         **4.7** | UNI-T UT61E multimeter (mA range), UNI-T UT61E multimeter (mA range), oscillosope at an 1.00 &#937; series resistor |
+| WEMOS LOLIN32 V1.0.0 |         3.7 |       55.7 |              2.0 |            0.13 | UNI-T UT61E multimeter (mA range), UNI-T UT61E multimeter (mA range), oscillosope at an 1.00 &#937; series resistor |
+| WEMOS LOLIN32 V1.0.0 |     **5.0** |       57.3 |              3.1 |         **1.2** | UNI-T UT61E multimeter (mA range), UNI-T UT61E multimeter (mA range), oscillosope at an 1.00 &#937; series resistor |
+| Damaged WT32-ETH01   |         3.3 |       00.0 |             00.0 |            00.0 |  |
 
 ## Test Setup
 
-The test setup was powered with a lab power supply at 5.0 V, optionally at 3.7 V for rechargeable Li-ion batteries, or 12 V if the board supports it. The current was measured both with a UNI-T UT61E multimeter in the mA range in series and with an oscillosope at an 1.00 &#937; series resistor. The voltage loss at the multimeter and the resistor is below 100 mV.
+The test setup was powered with a lab power supply at 5.0 V, optionally at 3.7 V for rechargeable Li-ion batteries, or 12 V if the board supports it. In the orginal tests, the current was measured both with a UNI-T UT61E multimeter in the mA range in series and with an oscillosope at an 1.00 &#937; series resistor. The voltage loss at the multimeter and the resistor is below 100 mV.
 
 The oscilloscope view helps to see current spikes and noise, mainly from the voltage regulators. The screenshots below show 10 mA per division on Y, zero is at the bottom grid line. (This cheap device has a minor offset error of about +1.5 mA in the used 10 mV range on this channel which cannot be calibrated any better.)
 
